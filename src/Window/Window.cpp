@@ -1,6 +1,7 @@
 #include <DXTool/Window/Window.h>
 
 #include <windows.h>
+#include <windowsx.h>
 
 #include <deque>
 #include <mutex>
@@ -187,7 +188,18 @@ namespace DXTool
     }
 
     Window::Window(Window&&) noexcept = default;
-    Window& Window::operator=(Window&&) noexcept = default;
+    Window& Window::operator=(Window&& other) noexcept
+    {
+        if (this != &other)
+        {
+            if (m_impl && m_impl->handle != nullptr)
+                DestroyWindow(m_impl->handle);
+
+            m_impl = std::move(other.m_impl);
+        }
+
+        return *this;
+    }
 
     Result<std::unique_ptr<Window>> Window::Create(const WindowDesc& desc)
     {
