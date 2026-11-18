@@ -13,6 +13,7 @@ endif()
 add_library(DXTool STATIC
     src/Core/Logger.cpp
     src/Core/Assert.cpp
+    src/Window/Window.cpp
     src/DXTool.cpp
 )
 
