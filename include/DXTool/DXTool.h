@@ -2,7 +2,7 @@
 
 #include <DXTool/Version.h>
 
-namespace DXTool
-{
-    // Public entry point for the DXTool library.
-}
+#include <DXTool/Core/Assert.h>
+#include <DXTool/Core/Logger.h>
+#include <DXTool/Core/Result.h>
+#include <DXTool/Core/Types.h>
