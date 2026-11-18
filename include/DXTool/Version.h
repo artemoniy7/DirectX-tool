@@ -1,0 +1,5 @@
+#pragma once
+
+#define DXTOOL_VERSION_MAJOR 0
+#define DXTOOL_VERSION_MINOR 1
+#define DXTOOL_VERSION_PATCH 0
