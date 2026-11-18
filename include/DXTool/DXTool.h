@@ -6,3 +6,5 @@
 #include <DXTool/Core/Logger.h>
 #include <DXTool/Core/Result.h>
 #include <DXTool/Core/Types.h>
+
+#include <DXTool/Window/Window.h>
