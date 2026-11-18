@@ -120,7 +120,7 @@ namespace DXTool
                 windowClass.style = CS_HREDRAW | CS_VREDRAW;
                 windowClass.lpfnWndProc = WindowProc;
                 windowClass.hInstance = GetModuleHandleW(nullptr);
-                windowClass.hCursor = LoadCursorW(nullptr, IDC_ARROW);
+                windowClass.hCursor = LoadCursorW(nullptr, MAKEINTRESOURCEW(32512));
                 windowClass.lpszClassName = ClassName;
 
                 classRegistered = RegisterClassExW(&windowClass) != 0 ||
