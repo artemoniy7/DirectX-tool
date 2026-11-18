@@ -231,8 +231,9 @@ namespace DXTool
         if (!m_impl || m_impl->handle == nullptr)
             return false;
 
+        const HWND windowHandle = m_impl->handle;
         MSG message{};
-        while (PeekMessageW(&message, m_impl->handle, 0, 0, PM_REMOVE))
+        while (PeekMessageW(&message, windowHandle, 0, 0, PM_REMOVE))
         {
             TranslateMessage(&message);
             DispatchMessageW(&message);
