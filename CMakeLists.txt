@@ -11,6 +11,8 @@ if(NOT WIN32)
 endif()
 
 add_library(DXTool STATIC
+    src/Core/Logger.cpp
+    src/Core/Assert.cpp
     src/DXTool.cpp
 )
 
